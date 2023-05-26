@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { AiOutlineSend, AiOutlineDownload } from 'react-icons/ai';
 
 import Avatar from '../../public/images/image1.png';
@@ -6,6 +7,17 @@ import waveEdge from '../../public/images/Vector.png';
 import { Button, Flex, Heading, Text, Image } from '@chakra-ui/react';
 
 const AboutMe = () => {
+  const downloadRef = useRef<HTMLAnchorElement>(null);
+
+  const handleDownload = async () => {
+    const fileUrl =
+      'https://drive.google.com/u/0/uc?id=1nuxokynKUt5pJ_hfF07GOybIC5DiLOe-&export=download&confirm=t&uuid=24023716-afac-4e85-8971-9e543c1311d6&at=AKKF8vw9dyhJZr7I_SZgWrH_Kutv:1685108645031';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Currículo-Diogo-Rother.pdf';
+    link.click();
+  };
+
   return (
     <Flex flexDirection={'column'} w="full" height="hug">
       <Flex
@@ -55,9 +67,11 @@ const AboutMe = () => {
             fontWeight="700"
             boxShadow={'0px 0px 6px #00000040'}
             leftIcon={<AiOutlineDownload size={24} />}
+            onClick={handleDownload}
           >
             Baixe meu Currículo
           </Button>
+          <a ref={downloadRef} style={{ display: 'none' }}></a>
           <Button
             bg="#545AD7"
             color="#fff"
