@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
   };
 
   return (
-    <Box bg={'#335CD7'} w="full" h="76px" p={'16px 100px'}>
+    <Box bg="#335CD7" w="full" h="76px" p="16px 100px">
       <Flex align="center" justify="space-between">
         <Heading color="#fff" fontSize="28px" fontWeight="600">
           Diogo Rother
@@ -35,7 +35,10 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
                 fontSize={18}
                 fontWeight="600"
                 size="md"
-                _hover={{ bg: '#7F6FDC' }}
+                _hover={{
+                  bg: '#4167D9',
+                  boxShadow: '#0000001a 0px 4px 12px'
+                }}
               >
                 {section}
               </Button>
