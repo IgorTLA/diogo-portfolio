@@ -18,9 +18,6 @@ const HomePage = () => {
       <Box id={'Projetos'}>
         <Projects />
       </Box>
-      <Box bg="tomato" w="100%" p={4} color="white" id={'Contato'}>
-        Contato
-      </Box>
     </Flex>
   );
 };
