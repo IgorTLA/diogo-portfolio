@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 import image7 from '../../public/images/appCtismartX.png';
-import capa from '../../public/images/capa.png';
+import capa1 from '../../public/images/capa-appcitx.png';
+import capa2 from '../../public/images/capa-centroxp.png';
+import image8 from '../../public/images/centroXP.png';
 import image1 from '../../public/images/projects/image-project1.png';
 import image2 from '../../public/images/projects/image-project2.png';
 import image3 from '../../public/images/projects/image-project3.png';
@@ -12,7 +14,6 @@ import image6 from '../../public/images/projects/image-project6.png';
 import {
   Flex,
   Heading,
-  Text,
   Image,
   Card,
   Tag,
@@ -31,15 +32,18 @@ const projects: Project[] = [
     title: 'Central IT Mobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
     tags: [1, 2, 5],
-    content: undefined
+    content: {
+      imageHeader: <Image src={capa1.src} alt="Central IT Mobile" />,
+      about: <Image src={image7.src} />
+    }
   },
   {
     title: 'Centro de Experiência',
     image: <Image src={image2.src} alt="Centro de Experiência" />,
     tags: [1, 2, 5, 3],
     content: {
-      imageHeader: <Image src={capa.src} alt="Centro de Experiência" />,
-      about: <Image src={image7.src} />
+      imageHeader: <Image src={capa2.src} alt="Centro de Experiência" />,
+      about: <Image src={image8.src} />
     }
   },
   {
@@ -136,10 +140,11 @@ const Projects = () => {
               {project.title}
             </Heading>
             <Flex gap="16px">
-              {tags.map((tag) => {
+              {tags.map((tag, index) => {
                 if (project.tags.includes(tag.id))
                   return (
                     <Tag
+                      key={index}
                       w="fit-content"
                       h="fit-content"
                       bg="#fff"
