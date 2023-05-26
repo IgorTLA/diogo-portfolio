@@ -10,6 +10,7 @@ import image3 from '../../public/images/projects/image-project3.png';
 import image4 from '../../public/images/projects/image-project4.png';
 import image5 from '../../public/images/projects/image-project5.png';
 import image6 from '../../public/images/projects/image-project6.png';
+import image9 from '../../public/images/Status.png';
 
 import {
   Flex,
@@ -31,7 +32,7 @@ const projects: Project[] = [
   {
     title: 'Central IT Mobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
-    tags: [1, 2, 5],
+    tags: [1, 2, 5, 7],
     content: {
       imageHeader: <Image src={capa1.src} alt="Central IT Mobile" />,
       about: <Image src={image7.src} />
@@ -139,7 +140,7 @@ const Projects = () => {
             <Heading paddingY="24px" fontSize="24px" fontWeight="700">
               {project.title}
             </Heading>
-            <Flex gap="16px">
+            <Flex gap="16px" pb="8px">
               {tags.map((tag, index) => {
                 if (project.tags.includes(tag.id))
                   return (
@@ -160,6 +161,9 @@ const Projects = () => {
                   );
               })}
             </Flex>
+            {project.title == 'Central IT Mobile' && (
+              <Image src={image9.src} alt="Status" />
+            )}
           </Card>
         ))}
       </Flex>
