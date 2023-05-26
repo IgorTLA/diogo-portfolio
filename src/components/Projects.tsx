@@ -26,7 +26,7 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 
-const projects = [
+const projects: Project[] = [
   {
     title: 'Central IT Mobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
@@ -75,11 +75,11 @@ const tags = [
 ];
 
 const Projects = () => {
-  const [currentProject, setCurrentProject] = useState();
+  const [currentProject, setCurrentProject] = useState<Project>();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleOpenModal = (project: any) => {
+  const handleOpenModal = (project: Project) => {
     if (project.content) {
       console.log();
 
@@ -101,7 +101,7 @@ const Projects = () => {
         Projetos
       </Heading>
       <Flex wrap="wrap" justify="center" gap={'32px'}>
-        {projects.map((project, index) => (
+        {projects.map((project: Project, index: number) => (
           <Card
             key={index}
             direction="column"
