@@ -7,7 +7,7 @@ import { Button, Flex, Heading, Text, Image } from '@chakra-ui/react';
 
 const AboutMe = () => {
   return (
-    <Flex flexDirection={'column'} w="full" height={523}>
+    <Flex flexDirection={'column'} w="full" height="hug">
       <Flex
         bg="#F3F3F3"
         flexDirection="column"

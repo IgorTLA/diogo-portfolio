@@ -35,7 +35,7 @@ const Services = () => {
   return (
     <Flex
       w="100%"
-      height={310}
+      height="hug"
       p="0 100px 24px"
       color="white"
       align="center"
@@ -54,8 +54,7 @@ const Services = () => {
         </Box>
       </Heading>
       <Flex
-        // w="fit-content"
-        // h="fit-content"
+        wrap="wrap"
         align="center"
         justifyContent="space-between"
         flexDirection="row"
