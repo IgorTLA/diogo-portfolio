@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import image7 from '../../public/images/appCtismartX.png';
+import capa from '../../public/images/capa.png';
 import image1 from '../../public/images/projects/image-project1.png';
 import image2 from '../../public/images/projects/image-project2.png';
 import image3 from '../../public/images/projects/image-project3.png';
@@ -8,12 +10,10 @@ import image5 from '../../public/images/projects/image-project5.png';
 import image6 from '../../public/images/projects/image-project6.png';
 
 import {
-  Button,
   Flex,
   Heading,
   Text,
   Image,
-  Box,
   Card,
   Tag,
   TagLabel,
@@ -31,13 +31,16 @@ const projects: Project[] = [
     title: 'Central IT Mobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
     tags: [1, 2, 5],
-    content: { name: 'teste' }
+    content: undefined
   },
   {
     title: 'Centro de Experiência',
     image: <Image src={image2.src} alt="Centro de Experiência" />,
     tags: [1, 2, 5, 3],
-    content: { name: 'teste' }
+    content: {
+      imageHeader: <Image src={capa.src} alt="Centro de Experiência" />,
+      about: <Image src={image7.src} />
+    }
   },
   {
     title: 'Sistema de Ações Fiscais',
@@ -53,7 +56,7 @@ const projects: Project[] = [
   },
   {
     title: 'Dashboard Controle de times',
-    image: <Image src={image5.src} alt="Dashboard Controle de times" />,
+    image: <Image src={image5.src} alt="Dashboard Controle de Equipes" />,
     tags: [1, 2, 5, 4],
     content: undefined
   },
@@ -158,11 +161,14 @@ const Projects = () => {
       {currentProject && (
         <Modal onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent w="full" maxW="80%">
             <ModalHeader>{currentProject?.title}</ModalHeader>
             <ModalCloseButton />
-            <ModalBody>
-              <Text>Teste</Text>
+            <ModalBody p="16px 32px">
+              <Flex flexDirection="column" align="center">
+                {currentProject?.content?.imageHeader}
+                {currentProject?.content?.about}
+              </Flex>
             </ModalBody>
           </ModalContent>
         </Modal>
