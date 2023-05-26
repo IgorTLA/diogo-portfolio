@@ -11,7 +11,7 @@ const AboutMe = () => {
 
   const handleDownload = async () => {
     const fileUrl =
-      'https://drive.google.com/u/0/uc?id=1nuxokynKUt5pJ_hfF07GOybIC5DiLOe-&export=download&confirm=t&uuid=24023716-afac-4e85-8971-9e543c1311d6&at=AKKF8vw9dyhJZr7I_SZgWrH_Kutv:1685108645031';
+      'https://drive.google.com/file/d/1nuxokynKUt5pJ_hfF07GOybIC5DiLOe-/view';
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'Currículo-Diogo-Rother.pdf';
