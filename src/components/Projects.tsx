@@ -12,25 +12,13 @@ import image5 from '../../public/images/projects/image-project5.png';
 import image6 from '../../public/images/projects/image-project6.png';
 import image9 from '../../public/images/Status.png';
 
-import {
-  Flex,
-  Heading,
-  Image,
-  Card,
-  Tag,
-  TagLabel,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure
-} from '@chakra-ui/react';
+import { Card, Flex, Heading, Image, Tag, TagLabel } from '@chakra-ui/react';
+import Router from 'next/router';
 
 const projects: Project[] = [
   {
     title: 'Central IT Mobile',
+    route: '/CentralITMobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
     tags: [1, 2, 5, 7],
     content: {
@@ -40,6 +28,7 @@ const projects: Project[] = [
   },
   {
     title: 'Centro de Experiência',
+    route: '/ExperienceCenter',
     image: <Image src={image2.src} alt="Centro de Experiência" />,
     tags: [1, 2, 5, 3],
     content: {
@@ -85,14 +74,10 @@ const tags = [
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState<Project>();
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   const handleOpenModal = (project: Project) => {
-    if (project.content) {
-      console.log();
-
+    if (project.route) {
       setCurrentProject(project);
-      onOpen();
+      Router.push(project.route);
     }
   };
 
@@ -167,21 +152,6 @@ const Projects = () => {
           </Card>
         ))}
       </Flex>
-      {currentProject && (
-        <Modal onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
-          <ModalOverlay />
-          <ModalContent w="full" maxW="80%">
-            <ModalHeader>{currentProject?.title}</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody p="16px 32px">
-              <Flex flexDirection="column" align="center">
-                {currentProject?.content?.imageHeader}
-                {currentProject?.content?.about}
-              </Flex>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      )}
     </Flex>
   );
 };
