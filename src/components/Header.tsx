@@ -50,6 +50,7 @@ const Header: React.FC<HeaderProps> = ({ onBack, title, sections }) => {
             {sections &&
               sections.map((section, index) => (
                 <Button
+                  key={index}
                   bg="#335CD7"
                   color="#fff"
                   onClick={handleScrollToElement(section)}

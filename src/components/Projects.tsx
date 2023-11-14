@@ -1,4 +1,4 @@
-import status from '../../public/images/Status.png';
+import status from '../../public/images/status.png';
 
 import { Card, Flex, Heading, Image, Tag, TagLabel } from '@chakra-ui/react';
 import { projects, tags } from 'constants/projects';
@@ -36,19 +36,17 @@ const Projects = () => {
             align="center"
             cursor={project.content ? 'pointer' : ''}
             boxShadow="0px 2px 16px rgba(0, 0, 0, 0.1)"
-            _hover={
-              project.content && {
-                _after: {
-                  content: '""',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: 'rgba(0, 0, 0, 0.1)'
-                }
+            _hover={{
+              _after: {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'rgba(0, 0, 0, 0.1)'
               }
-            }
+            }}
             onClick={() => handleOpenModal(project)}
           >
             {project.image}

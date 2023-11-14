@@ -15,45 +15,45 @@ export const projects: Project[] = [
     title: 'Central IT Mobile',
     route: '/CentralITMobile',
     image: <Image src={image1.src} alt="Central IT Mobile" />,
-    tags: [1, 2, 5, 7],
-    content: {
-      imageHeader: <Image src={capa1.src} alt="Central IT Mobile" />,
-      about: <Image src={image7.src} />
-    }
+    tags: [1, 2, 5, 7]
+    // content: {
+    //   imageHeader: <Image src={capa1.src} alt="Central IT Mobile" />,
+    //   about: <Image src={image7.src} />
+    // }
   },
   {
     title: 'Centro de Experiência',
     route: '/ExperienceCenter',
     image: <Image src={image2.src} alt="Centro de Experiência" />,
-    tags: [1, 2, 5, 3],
-    content: {
-      imageHeader: <Image src={capa2.src} alt="Centro de Experiência" />,
-      about: <Image src={image8.src} />
-    }
+    tags: [1, 2, 5, 3]
+    // content: {
+    //   imageHeader: <Image src={capa2.src} alt="Centro de Experiência" />,
+    //   about: <Image src={image8.src} />
+    // }
   },
   {
     title: 'Sistema de Ações Fiscais',
     image: <Image src={image3.src} alt="Sistema de Ações Fiscais" />,
-    tags: [1, 2, 5, 4],
-    content: undefined
+    tags: [1, 2, 5, 4]
+    // content: undefined
   },
   {
     title: 'Ouvidoria 156',
     image: <Image src={image4.src} alt="Ouvidoria 156" />,
-    tags: [1, 2, 5, 4],
-    content: undefined
+    tags: [1, 2, 5, 4]
+    // content: undefined
   },
   {
     title: 'Dashboard Controle de times',
     image: <Image src={image5.src} alt="Dashboard Controle de Equipes" />,
-    tags: [1, 2, 5, 4],
-    content: undefined
+    tags: [1, 2, 5, 4]
+    // content: undefined
   },
   {
     title: 'Dashboard CRM',
     image: <Image src={image6.src} alt="Dashboard CRM" />,
-    tags: [1, 2, 5, 4],
-    content: undefined
+    tags: [1, 2, 5, 4]
+    // content: undefined
   }
 ];
 
