@@ -15,7 +15,7 @@ import { centralItMobilePtBr } from 'constants/locale/pt-br';
 import { useRouter } from 'next/router';
 import { centralItMobileEnUs } from 'constants/locale/en-us';
 
-const CentralITMobile = () => {
+const CentralITMobile: React.FC = () => {
   const router = useRouter();
   const [language, setLanguage] = useState(centralItMobilePtBr);
 

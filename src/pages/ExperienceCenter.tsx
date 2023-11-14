@@ -16,7 +16,7 @@ import { experienceCenterPtBr } from 'constants/locale/pt-br';
 import { useRouter } from 'next/router';
 import { experienceCenterEnUs } from 'constants/locale/en-us';
 
-const ExperienceCenter = () => {
+const ExperienceCenter: React.FC = () => {
   const router = useRouter();
   const [language, setLanguage] = useState(experienceCenterPtBr);
 
