@@ -34,7 +34,7 @@ const Projects = () => {
             w={{ base: '400px', sm: '400px' }}
             bg="#fff"
             align="center"
-            cursor={project.content ? 'pointer' : ''}
+            cursor={project.route ? 'pointer' : ''}
             boxShadow="0px 2px 16px rgba(0, 0, 0, 0.1)"
             _hover={{
               _after: {
