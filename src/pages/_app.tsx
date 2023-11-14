@@ -15,12 +15,12 @@ const customTheme = extendTheme({
   }
 });
 
-function App({ Component, pageProps }: AppProps): React.ReactNode {
-  // const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+// function App({ Component, pageProps }: AppProps): React.ReactNode {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={customTheme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );
-}
-// export default MyApp;
+};
+export default MyApp;
