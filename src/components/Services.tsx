@@ -7,27 +7,28 @@ import {
 } from './MyIcons';
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { servicesPtBr } from '../constants/locale/pt-br';
 
 const services = [
   {
     icon: <UXResearch boxSize="60px" color="#335CD7" />,
-    title: 'UX Research'
+    title: servicesPtBr.card.t1
   },
   {
     icon: <UXAnalytics boxSize="60px" color="#335CD7" />,
-    title: 'UX Analytics'
+    title: servicesPtBr.card.t2
   },
   {
     icon: <UIDesign boxSize="60px" color="#335CD7" />,
-    title: 'UI Design'
+    title: servicesPtBr.card.t3
   },
   {
     icon: <InteractivePrototype boxSize="60px" color="#335CD7" />,
-    title: 'Protótipos Interativos'
+    title: servicesPtBr.card.t4
   },
   {
     icon: <UsabilityTests boxSize="60px" color="#335CD7" />,
-    title: 'Testes de Usabilidade'
+    title: servicesPtBr.card.t5
   }
 ];
 
@@ -43,14 +44,14 @@ const Services = () => {
       gap="40px"
     >
       <Heading flexDirection="row" color="#000" fontSize="40">
-        Meus{' '}
+        {servicesPtBr.title.t1}{' '}
         <Box as="span" color="#335CD7">
           {' '}
-          serviços{' '}
+          {servicesPtBr.title.t2}{' '}
         </Box>{' '}
-        para ajudar{' '}
+        {servicesPtBr.title.t3}{' '}
         <Box as="span" color="#335CD7">
-          sua empresa
+          {servicesPtBr.title.t4}
         </Box>
       </Heading>
       <Flex

@@ -1,10 +1,11 @@
 import { useRef } from 'react';
-import { AiOutlineSend, AiOutlineDownload } from 'react-icons/ai';
+import { AiOutlineDownload, AiOutlineSend } from 'react-icons/ai';
 
 import Avatar from '../../public/images/image1.png';
 import waveEdge from '../../public/images/Vector.png';
 
-import { Button, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import { Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { AboutMePtBr } from '../constants/locale/pt-br';
 
 const AboutMe = () => {
   const downloadRef = useRef<HTMLAnchorElement>(null);
@@ -29,20 +30,18 @@ const AboutMe = () => {
         <Flex justifyContent="space-between">
           <Flex flexDirection="column" w={'60%'}>
             <Heading mb="16px" fontSize="40">
-              Olá! Sou o Diogo Rother
+              {AboutMePtBr.title}
             </Heading>
             <Heading mb="22px" fontSize="48" color="#335CD7">
-              UX/UI & Product Designer
+              {AboutMePtBr.subTitle}
             </Heading>
             {/* <Container> */}
             <Text fontSize="22" fontWeight="400">
-              Especializado em Design da Experiência do Usuário. Sou uma pessoa
-              ágil que adora encarar novos desafios.{'  '}
+              {AboutMePtBr.description.p1}
+              {'  '}
             </Text>
             <Text fontSize="22" fontWeight="400">
-              Aprendi em minha trajetória que não basta construir telas bonitas,
-              devemos nos aprofundar em quais são os problemas dos nossos
-              usuários e qual é a melhor forma de resolvê-los.
+              {AboutMePtBr.description.p2}
             </Text>
           </Flex>
           <Flex>
@@ -69,7 +68,7 @@ const AboutMe = () => {
             leftIcon={<AiOutlineDownload size={24} />}
             onClick={handleDownload}
           >
-            Baixe meu Currículo
+            {AboutMePtBr.actions.b1}
           </Button>
           <a ref={downloadRef} style={{ display: 'none' }}></a>
           <Button
@@ -83,7 +82,7 @@ const AboutMe = () => {
             leftIcon={<AiOutlineSend fontWeight={'900'} size={24} />}
             _hover={{ bg: '#444BD3' }}
           >
-            Entre em Contato
+            {AboutMePtBr.actions.b2}
           </Button>
         </Flex>
       </Flex>

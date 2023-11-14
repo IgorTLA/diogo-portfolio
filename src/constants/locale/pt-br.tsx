@@ -10,7 +10,57 @@ import oldVersionExpCenterPtBr from '../../../public/images/experienceCenter/old
 import mediumVersionExpCenterPtBr from '../../../public/images/experienceCenter/mediumVersion.png';
 import firstNewVersionExpCenterPtBr from '../../../public/images/experienceCenter/firstNewVersion.png';
 
-export const centralItMobile = {
+export const menuPtBr = {
+  b1: 'Serviços',
+  b2: 'Projetos',
+  b3: 'Contato'
+};
+
+export const AboutMePtBr = {
+  title: 'Olá! Sou o Diogo Rother',
+  subTitle: 'UX/UI & Product Designer',
+  description: {
+    p1: 'Especializado em Design da Experiência do Usuário. Sou uma pessoa ágil que adora encarar novos desafios.',
+    p2: 'Aprendi em minha trajetória que não basta construir telas bonitas, devemos nos aprofundar em quais são os problemas dos nossos usuários e qual é a melhor forma de resolvê-los.'
+  },
+  actions: {
+    b1: 'Baixe meu Currículo',
+    b2: 'Entre em Contato'
+  }
+};
+
+export const servicesPtBr = {
+  title: { t1: 'Meus', t2: 'serviços', t3: 'para ajudar', t4: 'sua empresa' },
+  card: {
+    t1: 'UX Research',
+    t2: 'UX Analytics',
+    t3: 'UI Design',
+    t4: 'Protótipos Interativos',
+    t5: 'Testes de Usabilidade'
+  }
+};
+
+export const projectsPtBr = {
+  title: 'Projetos',
+  card: {
+    t1: 'Central IT Mobile',
+    t2: 'Centro de Experiência',
+    t3: 'Sistema de Ações Fiscais',
+    t4: 'Ouvidoria 156',
+    t5: 'Dashboard Controle de times',
+    t6: 'Dashboard CRM'
+  },
+  tags: {
+    tag1: 'UX Design',
+    tag2: 'UI Design',
+    tag3: 'Em Produção',
+    tag4: 'Em Construção',
+    tag5: 'Interativo',
+    tag6: 'Em Lojas'
+  }
+};
+
+export const centralItMobilePtBr = {
   title: 'Central IT Mobile',
   cover: coverAppCitPtBr,
   st1: 'O Desafio',
@@ -122,7 +172,7 @@ export const centralItMobile = {
   t8: 'Assumi um projeto em andamento, sem ter participado do alinhamento inicial e com o MVP já definido, o que representou um grande desafio. No entanto, essa experiência me permitiu questionar as decisões tomadas e avaliar se elas realmente estavam alinhadas com os objetivos do produto e do negócio. Como resultado, consegui revisar a estratégia interna e identificar possíveis oportunidades de melhoria para projetos futuros. Esta experiência me ensinou a importância de avaliar constantemente as decisões tomadas e garantir que estejam em linha com os objetivos gerais do projeto e da empresa, além de desenvolver habilidades de adaptação e resolução de problemas em um ambiente em constante mudança. Estou ansioso para aplicar esses aprendizados em futuros projetos e contribuir ainda mais para o sucesso da empresa.'
 };
 
-export const experienceCenter = {
+export const experienceCenterPtBr = {
   title: 'Centro de Experiência',
   cover: coverExpCenterPtBr,
   st1: 'O Desafio',

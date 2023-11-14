@@ -4,6 +4,8 @@ import { Card, Flex, Heading, Image, Tag, TagLabel } from '@chakra-ui/react';
 import { projects, tags } from 'constants/projects';
 import Router from 'next/router';
 
+import { projectsPtBr } from '../constants/locale/pt-br';
+
 const Projects = () => {
   const handleOpenModal = (project: Project) => {
     if (project.route) {
@@ -21,7 +23,7 @@ const Projects = () => {
       px={{ base: '60px', sm: '100px' }}
     >
       <Heading mb="16px" fontSize="36px" fontWeight="700" color="#335CD7">
-        Projetos
+        {projectsPtBr.title}
       </Heading>
       <Flex wrap="wrap" justify="center" gap={'32px'}>
         {projects.map((project: Project, index: number) => (
@@ -74,7 +76,7 @@ const Projects = () => {
                   );
               })}
             </Flex>
-            {project.title == 'Central IT Mobile' && (
+            {project.title === projectsPtBr.card.t1 && (
               <Image src={status.src} alt="Status" />
             )}
           </Card>
