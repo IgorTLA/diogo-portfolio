@@ -9,90 +9,89 @@ import {
   UnorderedList
 } from '@chakra-ui/react';
 import Header from 'components/Header';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { experienceCenterPtBr } from 'constants/locale/pt-br';
+import { useRouter } from 'next/router';
+import { experienceCenterEnUs } from 'constants/locale/en-us';
 
 const ExperienceCenter = () => {
+  const router = useRouter();
+  const [language, setLanguage] = useState(experienceCenterPtBr);
+
+  useEffect(() => {
+    setLanguage(
+      router.locale === 'pt-BR' ? experienceCenterPtBr : experienceCenterEnUs
+    );
+  }, [router.locale]);
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
-      <Header title={experienceCenterPtBr.title} onBack={true} />
+      <Header title={language.title} url="/ExperienceCenter" onBack={true} />
       <Flex p={'32px 16vw'} flexDirection="column">
-        <Image
-          src={experienceCenterPtBr.cover.src}
-          alt={experienceCenterPtBr.title}
-        />
+        <Image src={language.cover.src} alt={language.title} />
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st1}</Heading>
-          <Text>{experienceCenterPtBr.t1}</Text>
+          <Heading as="h3">{language.st1}</Heading>
+          <Text>{language.t1}</Text>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st2}</Heading>
-          <Text>{experienceCenterPtBr.t2}</Text>
+          <Heading as="h3">{language.st2}</Heading>
+          <Text>{language.t2}</Text>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st3}</Heading>
+          <Heading as="h3">{language.st3}</Heading>
           <HStack spacing={1}>
-            <Text as="b">{experienceCenterPtBr.t3.p1.name}</Text>
-            <Text>{experienceCenterPtBr.t3.p1.description}</Text>
+            <Text as="b">{language.t3.p1.name}</Text>
+            <Text>{language.t3.p1.description}</Text>
           </HStack>
           <HStack spacing={1}>
-            <Text as="b">{experienceCenterPtBr.t3.p2.name}</Text>
-            <Text>{experienceCenterPtBr.t3.p2.description}</Text>
+            <Text as="b">{language.t3.p2.name}</Text>
+            <Text>{language.t3.p2.description}</Text>
           </HStack>
           <HStack spacing={1}>
-            <Text as="b">{experienceCenterPtBr.t3.p3.name}</Text>
-            <Text>{experienceCenterPtBr.t3.p3.description}</Text>
+            <Text as="b">{language.t3.p3.name}</Text>
+            <Text>{language.t3.p3.description}</Text>
           </HStack>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st4}</Heading>
-          <Text>{experienceCenterPtBr.t4}</Text>
+          <Heading as="h3">{language.st4}</Heading>
+          <Text>{language.t4}</Text>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st5}</Heading>
+          <Heading as="h3">{language.st5}</Heading>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t5.p1.name}</Text>
-            <Text>{experienceCenterPtBr.t5.p1.description}</Text>
+            <Text as="b">{language.t5.p1.name}</Text>
+            <Text>{language.t5.p1.description}</Text>
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t5.p2.name}</Text>
-            <Text>{experienceCenterPtBr.t5.p2.description.t1}</Text>
-            <Text>{experienceCenterPtBr.t5.p2.description.t2}</Text>
+            <Text as="b">{language.t5.p2.name}</Text>
+            <Text>{language.t5.p2.description.t1}</Text>
+            <Text>{language.t5.p2.description.t2}</Text>
             <UnorderedList>
-              <ListItem>
-                {experienceCenterPtBr.t5.p2.description.topics.t1}
-              </ListItem>
-              <ListItem>
-                {experienceCenterPtBr.t5.p2.description.topics.t2}
-              </ListItem>
-              <ListItem>
-                {experienceCenterPtBr.t5.p2.description.topics.t3}
-              </ListItem>
-              <ListItem>
-                {experienceCenterPtBr.t5.p2.description.topics.t4}
-              </ListItem>
+              <ListItem>{language.t5.p2.description.topics.t1}</ListItem>
+              <ListItem>{language.t5.p2.description.topics.t2}</ListItem>
+              <ListItem>{language.t5.p2.description.topics.t3}</ListItem>
+              <ListItem>{language.t5.p2.description.topics.t4}</ListItem>
             </UnorderedList>
             <Image
-              src={experienceCenterPtBr.t5.p2.description.uxAnalytics.src}
-              alt={experienceCenterPtBr.st5}
+              src={language.t5.p2.description.uxAnalytics.src}
+              alt={language.st5}
             />
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t5.p3.name}</Text>
-            <Text>{experienceCenterPtBr.t5.p3.description}</Text>
+            <Text as="b">{language.t5.p3.name}</Text>
+            <Text>{language.t5.p3.description}</Text>
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t5.p4.name}</Text>
-            <Text>{experienceCenterPtBr.t5.p4.description}</Text>
+            <Text as="b">{language.t5.p4.name}</Text>
+            <Text>{language.t5.p4.description}</Text>
           </Box>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st6}</Heading>
+          <Heading as="h3">{language.st6}</Heading>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t6.p1.name}</Text>
-            <Text>{experienceCenterPtBr.t6.p1.description}</Text>
-            {experienceCenterPtBr.t6.p1.images.map((item) => (
+            <Text as="b">{language.t6.p1.name}</Text>
+            <Text>{language.t6.p1.description}</Text>
+            {language.t6.p1.images.map((item) => (
               <Box>
                 <Image key={item.id} src={item.image.src} alt={item.title} />
                 <Text>{item.title}</Text>
@@ -106,37 +105,37 @@ const ExperienceCenter = () => {
             ))}
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t6.p2.name}</Text>
-            <Text>{experienceCenterPtBr.t6.p2.description}</Text>
+            <Text as="b">{language.t6.p2.name}</Text>
+            <Text>{language.t6.p2.description}</Text>
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t6.p3.name}</Text>
-            <Text>{experienceCenterPtBr.t6.p3.description}</Text>
+            <Text as="b">{language.t6.p3.name}</Text>
+            <Text>{language.t6.p3.description}</Text>
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t6.p4.name}</Text>
-            <Text>{experienceCenterPtBr.t6.p4.description}</Text>
+            <Text as="b">{language.t6.p4.name}</Text>
+            <Text>{language.t6.p4.description}</Text>
           </Box>
           <Box>
-            <Text as="b">{experienceCenterPtBr.t6.p5.name}</Text>
-            <Text>{experienceCenterPtBr.t6.p5.description}</Text>
+            <Text as="b">{language.t6.p5.name}</Text>
+            <Text>{language.t6.p5.description}</Text>
           </Box>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st7}</Heading>
+          <Heading as="h3">{language.st7}</Heading>
           <UnorderedList>
-            <ListItem>{experienceCenterPtBr.t7.topics.t1}</ListItem>
-            <ListItem>{experienceCenterPtBr.t7.topics.t2}</ListItem>
-            <ListItem>{experienceCenterPtBr.t7.topics.t3}</ListItem>
-            <ListItem>{experienceCenterPtBr.t7.topics.t4}</ListItem>
-            <ListItem>{experienceCenterPtBr.t7.topics.t5}</ListItem>
+            <ListItem>{language.t7.topics.t1}</ListItem>
+            <ListItem>{language.t7.topics.t2}</ListItem>
+            <ListItem>{language.t7.topics.t3}</ListItem>
+            <ListItem>{language.t7.topics.t4}</ListItem>
+            <ListItem>{language.t7.topics.t5}</ListItem>
           </UnorderedList>
         </Box>
         <Box>
-          <Heading as="h3">{experienceCenterPtBr.st8}</Heading>
-          <Text>{experienceCenterPtBr.t8.p1}</Text>
-          <Text>{experienceCenterPtBr.t8.p2}</Text>
-          <Text>{experienceCenterPtBr.t8.p3}</Text>
+          <Heading as="h3">{language.st8}</Heading>
+          <Text>{language.t8.p1}</Text>
+          <Text>{language.t8.p2}</Text>
+          <Text>{language.t8.p3}</Text>
         </Box>
       </Flex>
     </Flex>

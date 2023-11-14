@@ -1,6 +1,6 @@
 interface Project {
   title: string;
-  route?: string;
+  url?: string;
   image: JSX.Element;
   tags: number[];
 }

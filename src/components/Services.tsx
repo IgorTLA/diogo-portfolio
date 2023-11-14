@@ -7,32 +7,42 @@ import {
 } from './MyIcons';
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { servicesEnUs } from 'constants/locale/en-us';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { servicesPtBr } from '../constants/locale/pt-br';
 
-const services = [
-  {
-    icon: <UXResearch boxSize="60px" color="#335CD7" />,
-    title: servicesPtBr.card.t1
-  },
-  {
-    icon: <UXAnalytics boxSize="60px" color="#335CD7" />,
-    title: servicesPtBr.card.t2
-  },
-  {
-    icon: <UIDesign boxSize="60px" color="#335CD7" />,
-    title: servicesPtBr.card.t3
-  },
-  {
-    icon: <InteractivePrototype boxSize="60px" color="#335CD7" />,
-    title: servicesPtBr.card.t4
-  },
-  {
-    icon: <UsabilityTests boxSize="60px" color="#335CD7" />,
-    title: servicesPtBr.card.t5
-  }
-];
-
 const Services = () => {
+  const router = useRouter();
+  const [language, setLanguage] = useState(servicesPtBr);
+
+  useEffect(() => {
+    setLanguage(router.locale === 'pt-BR' ? servicesPtBr : servicesEnUs);
+  }, [router.locale]);
+
+  const services = [
+    {
+      icon: <UXResearch boxSize="60px" color="#335CD7" />,
+      title: language.card.t1
+    },
+    {
+      icon: <UXAnalytics boxSize="60px" color="#335CD7" />,
+      title: language.card.t2
+    },
+    {
+      icon: <UIDesign boxSize="60px" color="#335CD7" />,
+      title: language.card.t3
+    },
+    {
+      icon: <InteractivePrototype boxSize="60px" color="#335CD7" />,
+      title: language.card.t4
+    },
+    {
+      icon: <UsabilityTests boxSize="60px" color="#335CD7" />,
+      title: language.card.t5
+    }
+  ];
+
   return (
     <Flex
       w="100%"
@@ -44,14 +54,14 @@ const Services = () => {
       gap="40px"
     >
       <Heading flexDirection="row" color="#000" fontSize="40">
-        {servicesPtBr.title.t1}{' '}
+        {language.title.t1}{' '}
         <Box as="span" color="#335CD7">
           {' '}
-          {servicesPtBr.title.t2}{' '}
+          {language.title.t2}{' '}
         </Box>{' '}
-        {servicesPtBr.title.t3}{' '}
+        {language.title.t3}{' '}
         <Box as="span" color="#335CD7">
-          {servicesPtBr.title.t4}
+          {language.title.t4}
         </Box>
       </Heading>
       <Flex

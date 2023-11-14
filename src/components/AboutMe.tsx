@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AiOutlineDownload, AiOutlineSend } from 'react-icons/ai';
 
 import Avatar from '../../public/images/image1.png';
@@ -6,8 +6,17 @@ import waveEdge from '../../public/images/Vector.png';
 
 import { Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { AboutMePtBr } from '../constants/locale/pt-br';
+import { AboutMeEnUs } from 'constants/locale/en-us';
+import { useRouter } from 'next/router';
 
 const AboutMe = () => {
+  const router = useRouter();
+  const [language, setLanguage] = useState(AboutMePtBr);
+
+  useEffect(() => {
+    setLanguage(router.locale === 'pt-BR' ? AboutMePtBr : AboutMeEnUs);
+  }, [router.locale]);
+
   const downloadRef = useRef<HTMLAnchorElement>(null);
 
   const handleDownload = async () => {
@@ -30,18 +39,18 @@ const AboutMe = () => {
         <Flex justifyContent="space-between">
           <Flex flexDirection="column" w={'60%'}>
             <Heading mb="16px" fontSize="40">
-              {AboutMePtBr.title}
+              {language.title}
             </Heading>
             <Heading mb="22px" fontSize="48" color="#335CD7">
-              {AboutMePtBr.subTitle}
+              {language.subTitle}
             </Heading>
             {/* <Container> */}
             <Text fontSize="22" fontWeight="400">
-              {AboutMePtBr.description.p1}
+              {language.description.p1}
               {'  '}
             </Text>
             <Text fontSize="22" fontWeight="400">
-              {AboutMePtBr.description.p2}
+              {language.description.p2}
             </Text>
           </Flex>
           <Flex>
@@ -68,7 +77,7 @@ const AboutMe = () => {
             leftIcon={<AiOutlineDownload size={24} />}
             onClick={handleDownload}
           >
-            {AboutMePtBr.actions.b1}
+            {language.actions.b1}
           </Button>
           <a ref={downloadRef} style={{ display: 'none' }}></a>
           <Button
@@ -82,7 +91,7 @@ const AboutMe = () => {
             leftIcon={<AiOutlineSend fontWeight={'900'} size={24} />}
             _hover={{ bg: '#444BD3' }}
           >
-            {AboutMePtBr.actions.b2}
+            {language.actions.b2}
           </Button>
         </Flex>
       </Flex>

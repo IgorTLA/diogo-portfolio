@@ -12,6 +12,7 @@ const HomePage = () => {
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
       <Header
         title="Diogo Rother"
+        url="/"
         sections={[menuPtBr.b1, menuPtBr.b2, menuPtBr.b3]}
       />
       <Flex id={'AboutMe'}>
