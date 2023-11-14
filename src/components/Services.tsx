@@ -7,31 +7,42 @@ import {
 } from './MyIcons';
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-
-const services = [
-  {
-    icon: <UXResearch boxSize="60px" color="#335CD7" />,
-    title: 'UX Research'
-  },
-  {
-    icon: <UXAnalytics boxSize="60px" color="#335CD7" />,
-    title: 'UX Analytics'
-  },
-  {
-    icon: <UIDesign boxSize="60px" color="#335CD7" />,
-    title: 'UI Design'
-  },
-  {
-    icon: <InteractivePrototype boxSize="60px" color="#335CD7" />,
-    title: 'Protótipos Interativos'
-  },
-  {
-    icon: <UsabilityTests boxSize="60px" color="#335CD7" />,
-    title: 'Testes de Usabilidade'
-  }
-];
+import { servicesEnUs } from 'constants/locale/en-us';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { servicesPtBr } from '../constants/locale/pt-br';
 
 const Services = () => {
+  const router = useRouter();
+  const [language, setLanguage] = useState(servicesPtBr);
+
+  useEffect(() => {
+    setLanguage(router.locale === 'pt-BR' ? servicesPtBr : servicesEnUs);
+  }, [router.locale]);
+
+  const services = [
+    {
+      icon: <UXResearch boxSize="60px" color="#335CD7" />,
+      title: language.card.t1
+    },
+    {
+      icon: <UXAnalytics boxSize="60px" color="#335CD7" />,
+      title: language.card.t2
+    },
+    {
+      icon: <UIDesign boxSize="60px" color="#335CD7" />,
+      title: language.card.t3
+    },
+    {
+      icon: <InteractivePrototype boxSize="60px" color="#335CD7" />,
+      title: language.card.t4
+    },
+    {
+      icon: <UsabilityTests boxSize="60px" color="#335CD7" />,
+      title: language.card.t5
+    }
+  ];
+
   return (
     <Flex
       w="100%"
@@ -43,14 +54,14 @@ const Services = () => {
       gap="40px"
     >
       <Heading flexDirection="row" color="#000" fontSize="40">
-        Meus{' '}
+        {language.title.t1}{' '}
         <Box as="span" color="#335CD7">
           {' '}
-          serviços{' '}
+          {language.title.t2}{' '}
         </Box>{' '}
-        para ajudar{' '}
+        {language.title.t3}{' '}
         <Box as="span" color="#335CD7">
-          sua empresa
+          {language.title.t4}
         </Box>
       </Heading>
       <Flex
