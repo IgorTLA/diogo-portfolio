@@ -5,7 +5,7 @@ import React from 'react';
 const CentralITMobile = () => {
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
-      <Header sections={['Serviços', 'Projetos', 'Contato']} />
+      <Header title="Central IT Mobile" onBack={true} />
     </Flex>
   );
 };

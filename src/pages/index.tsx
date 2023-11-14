@@ -8,7 +8,10 @@ import { Box, Flex } from '@chakra-ui/react';
 const HomePage = () => {
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
-      <Header sections={['Serviços', 'Projetos', 'Contato']} />
+      <Header
+        title="Diogo Rother"
+        sections={['Serviços', 'Projetos', 'Contato']}
+      />
       <Flex id={'AboutMe'}>
         <AboutMe />
       </Flex>

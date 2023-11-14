@@ -5,7 +5,7 @@ import React from 'react';
 const ExperienceCenter = () => {
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
-      <Header sections={['Serviços', 'Projetos', 'Contato']} />
+      <Header title="Centro de Experiência" onBack={true} />
     </Flex>
   );
 };
