@@ -1,5 +1,6 @@
 import {
   Box,
+  Card,
   Flex,
   HStack,
   Heading,
@@ -27,18 +28,24 @@ const ExperienceCenter = () => {
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
       <Header title={language.title} url="/ExperienceCenter" onBack={true} />
-      <Flex p={'32px 16vw'} flexDirection="column">
+      <Flex p={'32px 16vw'} flexDirection="column" gap={8}>
         <Image src={language.cover.src} alt={language.title} />
         <Box>
-          <Heading as="h3">{language.st1}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st1}
+          </Heading>
           <Text>{language.t1}</Text>
         </Box>
         <Box>
-          <Heading as="h3">{language.st2}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st2}
+          </Heading>
           <Text>{language.t2}</Text>
         </Box>
-        <Box>
-          <Heading as="h3">{language.st3}</Heading>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st3}
+          </Heading>
           <HStack spacing={1}>
             <Text as="b">{language.t3.p1.name}</Text>
             <Text>{language.t3.p1.description}</Text>
@@ -51,18 +58,22 @@ const ExperienceCenter = () => {
             <Text as="b">{language.t3.p3.name}</Text>
             <Text>{language.t3.p3.description}</Text>
           </HStack>
-        </Box>
+        </Flex>
         <Box>
-          <Heading as="h3">{language.st4}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st4}
+          </Heading>
           <Text>{language.t4}</Text>
         </Box>
-        <Box>
-          <Heading as="h3">{language.st5}</Heading>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st5}
+          </Heading>
           <Box>
             <Text as="b">{language.t5.p1.name}</Text>
             <Text>{language.t5.p1.description}</Text>
           </Box>
-          <Box>
+          <Flex flexDirection="column" gap={'8px'}>
             <Text as="b">{language.t5.p2.name}</Text>
             <Text>{language.t5.p2.description.t1}</Text>
             <Text>{language.t5.p2.description.t2}</Text>
@@ -73,10 +84,11 @@ const ExperienceCenter = () => {
               <ListItem>{language.t5.p2.description.topics.t4}</ListItem>
             </UnorderedList>
             <Image
+              alignSelf="center"
               src={language.t5.p2.description.uxAnalytics.src}
               alt={language.st5}
             />
-          </Box>
+          </Flex>
           <Box>
             <Text as="b">{language.t5.p3.name}</Text>
             <Text>{language.t5.p3.description}</Text>
@@ -85,25 +97,43 @@ const ExperienceCenter = () => {
             <Text as="b">{language.t5.p4.name}</Text>
             <Text>{language.t5.p4.description}</Text>
           </Box>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st6}</Heading>
-          <Box>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st6}
+          </Heading>
+          <Flex flexDirection="column" gap={'16px'}>
             <Text as="b">{language.t6.p1.name}</Text>
             <Text>{language.t6.p1.description}</Text>
             {language.t6.p1.images.map((item) => (
-              <Box>
-                <Image key={item.id} src={item.image.src} alt={item.title} />
-                <Text>{item.title}</Text>
+              <Card
+                key={item.id}
+                direction="column"
+                overflow="hidden"
+                variant="outline"
+                bg="#fff"
+                align="center"
+                padding={8}
+                gap={'8px'}
+                boxShadow="0px 2px 16px rgba(0, 0, 0, 0.1)"
+              >
+                <Image
+                  alignSelf="center"
+                  src={item.image.src}
+                  alt={item.title}
+                />
+                <Text fontSize="20px" fontWeight="700">
+                  {item.title}
+                </Text>
                 {item.description && (
                   <Text>
                     <Text as="b">{item.description.t1}</Text>
                     {item.description.t2}
                   </Text>
                 )}
-              </Box>
+              </Card>
             ))}
-          </Box>
+          </Flex>
           <Box>
             <Text as="b">{language.t6.p2.name}</Text>
             <Text>{language.t6.p2.description}</Text>
@@ -120,9 +150,11 @@ const ExperienceCenter = () => {
             <Text as="b">{language.t6.p5.name}</Text>
             <Text>{language.t6.p5.description}</Text>
           </Box>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st7}</Heading>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st7}
+          </Heading>
           <UnorderedList>
             <ListItem>{language.t7.topics.t1}</ListItem>
             <ListItem>{language.t7.topics.t2}</ListItem>
@@ -130,13 +162,15 @@ const ExperienceCenter = () => {
             <ListItem>{language.t7.topics.t4}</ListItem>
             <ListItem>{language.t7.topics.t5}</ListItem>
           </UnorderedList>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st8}</Heading>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st8}
+          </Heading>
           <Text>{language.t8.p1}</Text>
           <Text>{language.t8.p2}</Text>
           <Text>{language.t8.p3}</Text>
-        </Box>
+        </Flex>
       </Flex>
     </Flex>
   );

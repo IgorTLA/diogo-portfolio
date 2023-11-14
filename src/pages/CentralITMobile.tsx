@@ -28,18 +28,24 @@ const CentralITMobile = () => {
   return (
     <Flex bg="#fff" flexDirection="column" w="full" h="full">
       <Header title={language.title} url="/CentralITMobile" onBack={true} />
-      <Flex p={'32px 16vw'} flexDirection="column">
+      <Flex p={'32px 16vw'} flexDirection="column" gap={8}>
         <Image src={language.cover.src} alt={language.title} />
         <Box>
-          <Heading as="h3">{language.st1}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st1}
+          </Heading>
           <Text>{language.t1}</Text>
         </Box>
         <Box>
-          <Heading as="h3">{language.st2}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st2}
+          </Heading>
           <Text>{language.t2}</Text>
         </Box>
-        <Box>
-          <Heading as="h3">{language.st3}</Heading>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st3}
+          </Heading>
           <HStack spacing={1}>
             <Text as="b">{language.t3.p1.name}</Text>
             <Text>{language.t3.p1.description}</Text>
@@ -56,13 +62,17 @@ const CentralITMobile = () => {
             <Text as="b">{language.t3.p4.name}</Text>
             <Text>{language.t3.p4.description}</Text>
           </HStack>
-        </Box>
+        </Flex>
         <Box>
-          <Heading as="h3">{language.st4}</Heading>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st4}
+          </Heading>
           <Text>{language.t4}</Text>
         </Box>
-        <Box>
-          <Heading as="h3">{language.st5}</Heading>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st5}
+          </Heading>
           <Box>
             <Text as="b">{language.t5.p1.name}</Text>
             <Text>{language.t5.p1.description}</Text>
@@ -83,20 +93,27 @@ const CentralITMobile = () => {
               <ListItem>{language.t5.p4.topics.t3}</ListItem>
               <ListItem>{language.t5.p4.topics.t4}</ListItem>
             </UnorderedList>
-            <Image src={language.t5.p4.discover.src} alt={language.st5} />
+            <Image
+              alignSelf="center"
+              src={language.t5.p4.discover.src}
+              alt={language.st5}
+            />
           </Box>
           <Box>
             <Text as="b">{language.t5.p5.name}</Text>
             <Text>{language.t5.p5.description}</Text>
             <Text>{language.t5.p6}</Text>
           </Box>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st6}</Heading>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st6}
+          </Heading>
           <Box>
             <Text as="b">{language.t6.p1.name}</Text>
             <Text>{language.t6.p1.description}</Text>
             <Image
+              alignSelf="center"
               src={language.t6.p1.wireframe.src}
               alt={language.t6.p1.name}
             />
@@ -111,6 +128,7 @@ const CentralITMobile = () => {
               {language.t6.p3.description}
             </Text>
             <Image
+              alignSelf="center"
               src={language.t6.p3.usability.src}
               alt={language.t6.p2.name}
             />
@@ -119,6 +137,7 @@ const CentralITMobile = () => {
             <Text as="b">{language.t6.p4.name}</Text>
             <Text>{language.t6.p4.description}</Text>
             <Image
+              alignSelf="center"
               src={language.t6.p4.styleguide.src}
               alt={language.t6.p4.name}
             />
@@ -131,15 +150,19 @@ const CentralITMobile = () => {
             <Text as="b">{language.t6.p6.name}</Text>
             <Text>{language.t6.p6.description}</Text>
           </Box>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st7}</Heading>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st7}
+          </Heading>
           <Text>{language.t7}</Text>
-        </Box>
-        <Box>
-          <Heading as="h3">{language.st8}</Heading>
+        </Flex>
+        <Flex flexDirection="column" gap={'8px'}>
+          <Heading fontSize="30" color="#6B58D6">
+            {language.st8}
+          </Heading>
           <Text>{language.t8}</Text>
-        </Box>
+        </Flex>
       </Flex>
     </Flex>
   );

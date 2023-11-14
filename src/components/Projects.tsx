@@ -97,24 +97,26 @@ const Projects = () => {
             align="center"
             cursor={project.url ? 'pointer' : ''}
             boxShadow="0px 2px 16px rgba(0, 0, 0, 0.1)"
-            _hover={{
-              _after: {
-                content: '""',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: 'rgba(0, 0, 0, 0.1)'
+            _hover={
+              project.url && {
+                _after: {
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(0, 0, 0, 0.1)'
+                }
               }
-            }}
+            }
             onClick={() => handleOpenPage(project)}
           >
             {project.image}
             <Heading paddingY="24px" fontSize="24px" fontWeight="700">
               {project.title}
             </Heading>
-            <Flex gap="16px" pb="8px">
+            <Flex gap="8px" pb="8px">
               {tags.map((tag, index) => {
                 if (project.tags.includes(tag.id))
                   return (

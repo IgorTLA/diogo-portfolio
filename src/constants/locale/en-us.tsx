@@ -1,11 +1,11 @@
 import coverAppCitPtBr from '../../../public/images/centralItMobile/cover.png';
 import discoverAppCitPtBr from '../../../public/images/centralItMobile/discover-and-define.png';
 import wireframeAppCitPtBr from '../../../public/images/centralItMobile/wireframe.png';
-import usabilityAppCitPtBr from '../../../public/images/centralItMobile/usability-testing.png';
+import usabilityAppCitEnUs from '../../../public/images/centralItMobile/usability-testing-en-us.png';
 import styleguideAppCitPtBr from '../../../public/images/centralItMobile/styleguide.png';
 
 import coverExpCenterPtBr from '../../../public/images/experienceCenter/cover.png';
-import uxAnalyticsExpCenterPtBr from '../../../public/images/experienceCenter/uxAnalytics.png';
+import uxAnalyticsExpCenterEnUs from '../../../public/images/experienceCenter/uxAnalyticsEnUs.png';
 import oldVersionExpCenterPtBr from '../../../public/images/experienceCenter/oldVersion.png';
 import mediumVersionExpCenterPtBr from '../../../public/images/experienceCenter/mediumVersion.png';
 import firstNewVersionExpCenterPtBr from '../../../public/images/experienceCenter/firstNewVersion.png';
@@ -41,7 +41,7 @@ export const servicesEnUs = {
 };
 
 export const projectsEnUs = {
-  title: 'Projetos',
+  title: 'Projects',
   card: {
     t1: 'Central IT Mobile',
     t2: 'Experience Center',
@@ -64,7 +64,7 @@ export const centralItMobileEnUs = {
   title: 'Central IT Mobile',
   cover: coverAppCitPtBr,
   st1: 'The Challenge',
-  t1: 'Adapt a robust IT application for web-based ticket opening and approvals to a mobile platform. iOS and Android',
+  t1: 'Adapt a robust IT application for web-based ticket opening and approvals to a mobile platform. iOS and Android.',
   st2: 'My Role',
   t2: 'Conducting quantitative research, Hotjar analyses, service blueprints, CSD matrix, impact x effort matrix, wireframes, golden path, design system, interactive prototyping, usability testing, sprint prioritization, facilitating SCRUM ceremonies for the involved team, and continuous improvement roadmap.',
   st3: 'Tools Used',
@@ -140,7 +140,7 @@ export const centralItMobileEnUs = {
       name: 'Learning: ',
       description:
         "Avoid making the prototype fully interactive, as many users may navigate out of curiosity, which can interfere with the analysis. It's best to focus solely on the interactions within the mission flow.",
-      usability: usabilityAppCitPtBr
+      usability: usabilityAppCitEnUs
     },
     p4: {
       name: 'Styleguide',
@@ -173,10 +173,10 @@ export const centralItMobileEnUs = {
 export const experienceCenterEnUs = {
   title: 'Experience Center',
   cover: coverExpCenterPtBr,
-  st1: 'The Challenge', //arrumar
-  t1: 'Redesign do Centro de Experiência principal da Central IT',
-  st2: 'My Role', // arrumar
-  t2: 'Elaboração de pesquisas quantitativas, análises hotjar, blueprint de serviço, matriz CSD, wireframes, golden path, prototipação interativa (para facilitar o handoff) priorização de sprints e condução de cerimônias SCRUM da equipe envolvida.',
+  st1: 'The Challenge',
+  t1: "Redesign of the Central IT's main Experience Center.",
+  st2: 'My Role',
+  t2: 'Quantitative research design, Hotjar analyses, service blueprinting, CSD matrix, wireframing, golden path creation, interactive prototyping (to facilitate handoff), sprint prioritization, and facilitation of SCRUM ceremonies for the involved team.',
   st3: 'Tools Used',
   t3: {
     p1: {
@@ -214,7 +214,7 @@ export const experienceCenterEnUs = {
           t4: '36.6% of users use the environment to access activities, making it the most important functionality.'
         },
         t3: 'With this information, I was able to define the changes that would generate the most value for users, making it easier to prioritize them in the sprints.',
-        uxAnalytics: uxAnalyticsExpCenterPtBr
+        uxAnalytics: uxAnalyticsExpCenterEnUs
       }
     },
     p3: {
