@@ -71,7 +71,7 @@ export const centralItMobile = {
         'We conducted unmoderated usability tests using the Maze tool with the medium-fidelity version to ensure we were on the right track and identify potential improvements in the flows.'
     },
     p3: {
-      name: 'Learning:',
+      name: 'Learning: ',
       description:
         "Avoid making the prototype fully interactive, as many users may navigate out of curiosity, which can interfere with the analysis. It's best to focus solely on the interactions within the mission flow."
     },
