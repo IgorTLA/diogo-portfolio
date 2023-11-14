@@ -98,7 +98,7 @@ const Projects = () => {
             cursor={project.url ? 'pointer' : ''}
             boxShadow="0px 2px 16px rgba(0, 0, 0, 0.1)"
             _hover={
-              project.url && {
+              project && {
                 _after: {
                   content: '""',
                   position: 'absolute',
