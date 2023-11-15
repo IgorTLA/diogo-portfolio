@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import React from 'react';
 
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
@@ -16,10 +16,11 @@ const customTheme = extendTheme({
 });
 
 // function App({ Component, pageProps }: AppProps): React.ReactNode {
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }: ) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const CustomComponent = Component as any;
   return (
     <ChakraProvider theme={customTheme}>
-      <Component {...pageProps} />
+      <CustomComponent {...pageProps} />
     </ChakraProvider>
   );
 };
